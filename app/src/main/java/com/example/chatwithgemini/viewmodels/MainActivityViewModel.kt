@@ -21,7 +21,6 @@ class MainActivityViewModel: ViewModel() {
     var messageInputValue by mutableStateOf("")
     var generating by mutableStateOf(false)
     var listState: LazyListState? = null
-    var speechRecognizerListening by mutableStateOf(false)
     fun sendMessage(message: String) {
         if(message.isBlank()) return
         viewModelScope.launch {

@@ -41,6 +41,7 @@ import androidx.compose.ui.unit.dp
 import androidx.core.graphics.drawable.toBitmap
 import com.example.chatwithgemini.R
 import com.example.chatwithgemini.ui.theme.ChatWithGeminiTheme
+import com.example.chatwithgemini.utilities.TextFormatter
 import com.example.chatwithgemini.viewmodels.MainActivityViewModel
 import com.google.ai.client.generativeai.type.asTextOrNull
 
@@ -133,7 +134,7 @@ fun MainActivityScreen(
                         for (part in parts) {
                             MessageBubble(
                                 part.asTextOrNull() ?: "",
-                                role ?: "",
+                                role ?: "model",
                             )
                         }
                     }
@@ -141,11 +142,6 @@ fun MainActivityScreen(
                 when {
                     viewModel.generating -> {
                         MessageBubble("...", "model")
-                    }
-                }
-                when {
-                    viewModel.speechRecognizerListening -> {
-                        MessageBubble("listening...", "user")
                     }
                 }
             }

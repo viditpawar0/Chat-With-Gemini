@@ -5,24 +5,12 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.speech.RecognizerIntent
-import android.speech.SpeechRecognizer
-import android.util.Log
-import android.view.WindowManager
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
-import androidx.activity.result.ActivityResultCallback
 import androidx.activity.result.contract.ActivityResultContract
-import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.layout.padding
-import androidx.compose.material3.Scaffold
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.example.chatwithgemini.ui.screens.MainActivityScreen
-import com.example.chatwithgemini.ui.theme.ChatWithGeminiTheme
 import com.example.chatwithgemini.viewmodels.MainActivityViewModel
 import com.google.ai.client.generativeai.type.UnknownException
 
